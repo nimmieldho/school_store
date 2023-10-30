@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1 style="text-align:center;color:Bisque;font-family:Times New Roman;"><b>School Store</b></h1>
+<div>
+    <div>
+        <p style="color:white;font-size:25px;font-family:Times New Roman;">A school store can be a learning opportunity for many different groups of students, including school business classes, student government, student organizations, special education classes, students looking for a challenge, and other groups. Properly run, a school store will prosper and make money.</p>
+        <div>
+            <div style="color:white;font-size:25px;font-family:Times New Roman;">
+                What sells best at a school store?
+Basics like crayons, markers, pencils, and paper will always be in high demand. With items like pencils, you'll want to stock some fun varieties instead of just the standard yellow ones—although you can sell those too!
+            </div>
+        </div>
+<br>
+        <button>
+        <a  href="{% url 'school_store:login' %}">Click here to login</a>
+        </button>
+
+    </div>
+</div>
+
+{% endblock %}

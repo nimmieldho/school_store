@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h1 style="text-align:center;color:Bisque;font-family:Times New Roman;"><b>LOGIN</b></h1>
+<div class="col-md-8">
+  <div class="shadow-normal p-3 mb-3 bg-light rounded card" style="width: 29rem;height: 400px;">
+    <div class="card-body">
+      <form action="" method="post" class="p-3 shadow">
+          {% csrf_token %}
+          <input type="text" name="Username" placeholder="Username"><br><br>
+          <input type="password" name="Password" placeholder="Password"><br><br>
+         <button> <a class="btn btn-info btn-large"  href="{% url 'school_store:new_page' %}">Login</a></button>
+          <a href="{% url 'school_store:register' %}">Register here</a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

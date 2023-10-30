@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1 style="text-align:center;color:Bisque;font-family:Times New Roman;"><b>Application Form</b></h1>
+
+
+<div class="col-md-10">
+
+
+    <div class="shadow-normal p-3 mb-3 bg-light rounded card" style="width:600px; max-width: 500%; height: 600px;opacity:75%; text-align:left;margin-left:10%;">
+        <div class="card-body">
+            <form method="post" class="p-3 shadow">
+                {% csrf_token %}
+    <table>
+  <tr>
+    <td><label for="name">Name:</label></td>
+    <td><input type="text" name="name" id="name" placeholder="your name"></td>
+  </tr>&nbsp;
+  <tr>
+    <td><label for="dob">DOB:</label></td>
+    <td><input type="date" name="dob" id="dob" placeholder="DOB"></td>
+  </tr>
+  <tr>
+    <td><label for="age">Age:</label></td>
+    <td><input type="number" name="number" id="number" placeholder="Age"></td>
+  </tr>
+  <tr>
+    <td><label for="gender">Gender:</label></td>
+    <td>Male: <input type="radio" name="gender" value="male">
+      Female: <input type="radio" name="gender" value="female">
+      Transgender: <input type="radio" name="gender" value="Transgender"></td>
+  </tr>
+  <tr>
+    <td><label for="phoneNumber">Phone Number:</label></td>
+    <td><input type="number" name="phoneNumber" id="phoneNumber"></td>
+  </tr>
+  <tr>
+    <td><label for="email">Email:</label></td>
+    <td><input type="text" name="email" id="email" placeholder="your email"></td>
+  </tr>
+
+  <tr>
+    <td><label for="address">Address:</label></td>
+    <td><textarea name="address" id="address" placeholder="Address"></textarea></td>
+  </tr>
+
+
+  <tr>
+    <td><label for="Department">Department</label></td>
+    <td>
+      <select name="Departments" id="department" class="department-dropdown">
+        <option value="">--Select Department--</option>
+        <option value="Computer science">computer science</option>
+        <option value="Commerce">Commerce</option>
+        <option value="Science">Science</option>
+        <option value="Humanities">Humanities</option>
+        <option value="Mathematics">Mathematics</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td> <label for="courses">Courses:</label></td>
+    <td>
+      <select id="courses" name="courses" class="courses-dropdown">
+        <option value="">--Select Courses--</option>
+          <option value="Computer science">BSC computer science</option>
+        <option value="Commerce">B.Com</option>
+        <option value="Science">BSC zoology</option>
+        <option value="Humanities">BA politics</option>
+        <option value="Mathematics">BSC maths</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td><label for="Purpose">Purpose</label></td>
+    <td>
+      <select id="purpose" name="Purpose">
+        <option value="">Choose</option>
+        <option value="Enquiry">Enquiry</option>
+        <option value="Place order">Place order</option>
+           <option value="Return">Return</option>
+           <option value="FAQ's">FAQ's</option>
+
+      </select></td>
+  </tr>
+  <tr>
+    <td><label for="material">Materials Required :</label></td>
+    <td>
+      <input type="checkbox" id="Notebook" name="materials[]" value="Notebook">
+      <label for="Notebook">Notebook</label>
+      <input type="checkbox" id="Pen" name="materials[]" value="Pen">
+      <label for="Pen">Pen</label>
+      <input type="checkbox" id="Exam papers" name="materials[]" value="Exam papers">
+      <label for="Exam papers">Exam papers</label>
+    </td>
+  </tr>
+<!--  <tr div class="button">-->
+<!--    <td colspan="2"><input type="submit" class="{% url 'school_store:order' %}" value="Confirm" onclick="return formValidation()" /></td>-->
+<!--  </tr>-->
+<!--&lt;!&ndash;        <tr div class="button">&ndash;&gt;-->
+<!--    <td colspan="2"><input type="submit" class="{% url 'school_store:demo' %}" value="Logout" onclick="return formValidation()" /></td>-->
+<!--&lt;!&ndash;  </tr>&ndash;&gt;-->
+
+      <tr>
+
+        <td><button class="{% url 'school_store:order'  %}" onclick='alert("your data has been saved successfully")' style="btn btn-info btn-large">Confirm</button>
+                    <a href="{% url 'school_store:demo' %}">Logout</a></td>
+
+      </tr>
+
+      </table>
+      </form>
+  </div>
+    </div>
+</div>
+<!--{% for msg in messages %}-->
+<!--      <div class="alert alert-success" role="alert">-->
+<!--        <h3>{{ msg }}</h3>-->
+<!--      </div>-->
+<!--{% endfor %}-->
+
+
+
+<!--                    <a href="{% url 'school_store:demo' %}">Logout</a>-->
+
+<!--                <div class="container">-->
+<!--                   <b> Materials Provide:</b><br>-->
+<!--                    <input type="checkbox" name="Materials provide" value="Notebook">Notebook<br>-->
+<!--                    <input type="checkbox" name="Materials provide" value="Pen">Pen<br>-->
+<!--                    <input type="checkbox" name="Materials provide" value="Exam papers">Exam papers<br>-->
+
+<!--                </div>-->
+
+
+
+
+<div>
+    <button class="btn btn-info btn-large">
+    <a href="{% url 'school_store:demo' %}"><b>Home</b></a>
+        </button>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+

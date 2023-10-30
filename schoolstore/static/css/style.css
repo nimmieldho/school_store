@@ -1,0 +1,28 @@
+
+.card{
+    align:center;
+    width:90%;
+    max-width: 440px;
+    color:brown;
+    text-align:center;
+    border:1px solid rgba(255, 255, 255, 0.3);
+    background:#000;
+    opacity:60%;
+
+    height:50%;
+    radius:50px;
+     border-radius:16px;
+     padding:50px 35px;
+     margin-left:50%;
+     box-shadow: 04px 30px rgba(0,0,0,0.1)
+}
+
+/***alert messages***/
+.alert {
+  padding: 15px;
+  border: 1px solid #d9534f; /* Border color for danger alert */
+  background-color: #f2dede; /* Background color for danger alert */
+  color: #a94442; /* Text color for danger alert */
+  border-radius: 4px;
+  margin-bottom: 15px;
+  }

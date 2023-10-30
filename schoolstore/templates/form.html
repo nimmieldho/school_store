@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1 style="text-align:center;"><b>Application Form</b></h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="container">
+  <input type="text" name="Name" placeholder="Enter your Name"><br>
+   <input type="date" name="DOB" placeholder="Date Of Birth"><br>
+   <input type="number" name="Age" placeholder="Enter your Age"><br>
+   <li> <b>Please select your Gender:</b></li>
+   <input type="radio" name="Gender" value="Male">Male<br>
+    <input type="radio" name="Gender" value=" Female">Female<br>
+   <input type="text" name="Phone number" placeholder="Enter your phone number"><br>
+  <input type="email" name='Email id' placeholder="Enter your email id"><br>
+  <input type="text" name="Address" placeholder="Enter your address"><br>
+    </div>
+<!--dropdown departmnt and sub drpdwn courses-->
+
+
+
+<div class="container">
+            <li><b>Purpose:</b></li>
+            {{ form }}
+
+</div>
+    <div class="container">
+       <b> Materials Provide:</b><br>
+        <input type="checkbox" name="Materials provide" value="Notebook">Notebook<br>
+        <input type="checkbox" name="Materials provide" value="Pen">Pen<br>
+        <input type="checkbox" name="Materials provide" value="Exam papers">Exam papers<br>
+        <input type="submit" value="Confirm" class="{% url 'school_store:form' %}">
+        <input type="button" value="Logout">
+    </div>
+</form>
+{% endblock %}
